@@ -161,25 +161,30 @@
     color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.1; white-space: nowrap;
   }
   .today-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-  .alert { display: flex; align-items: center; gap: 9px; }
+  .alert {
+    display: flex; align-items: center; gap: 13px;
+    background: color-mix(in srgb, var(--status) 10%, var(--surface));
+    border: 1.5px solid color-mix(in srgb, var(--status) 45%, transparent);
+    border-radius: 14px; padding: 8px 16px 8px 11px;
+  }
   .alert-ring {
-    width: 26px; height: 26px; border-radius: 50%; flex: none;
+    width: 46px; height: 46px; border-radius: 50%; flex: none;
     display: flex; align-items: center; justify-content: center;
-    background: color-mix(in srgb, var(--status) 20%, transparent);
-    border: 2px solid var(--status);
+    background: color-mix(in srgb, var(--status) 22%, transparent);
+    border: 3px solid var(--status);
     animation: alert-breathe 2.4s ease-in-out infinite;
   }
-  .alert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--status); }
+  .alert-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--status); }
   @keyframes alert-breathe {
-    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--status) 55%, transparent); }
-    60%      { box-shadow: 0 0 0 7px color-mix(in srgb, var(--status) 0%, transparent); }
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--status) 60%, transparent); }
+    60%      { box-shadow: 0 0 0 12px color-mix(in srgb, var(--status) 0%, transparent); }
   }
-  .alert-text { display: flex; flex-direction: column; gap: 1px; }
+  .alert-text { display: flex; flex-direction: column; gap: 2px; }
   .alert-level {
-    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600;
-    color: var(--status-ink); line-height: 1.1; letter-spacing: 0.04em;
+    font-family: "Big Shoulders Display", sans-serif; font-size: 26px; font-weight: 800;
+    color: var(--status-ink); line-height: 0.95; letter-spacing: 0.02em;
   }
-  .alert-sub { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .alert-sub { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; }
   .alert--green { --status: var(--status-green); --status-ink: var(--status-green-ink); }
   .alert--amber { --status: var(--status-amber); --status-ink: var(--status-amber-ink); }
   .alert--red   { --status: var(--cat-high);    --status-ink: var(--cat-high); }
