@@ -26,6 +26,8 @@
     --status-green-ink: #14663a;
     --status-amber: #d08700;
     --status-amber-ink: #8a5a00;
+    --status-orange: #e2680f;
+    --status-orange-ink: #9c4407;
     --shadow: 0 12px 32px -18px rgba(18, 26, 43, 0.35);
     color-scheme: light;
   }
@@ -56,6 +58,8 @@
       --status-green-ink: #6fe3a1;
       --status-amber: #f0b429;
       --status-amber-ink: #f5c95a;
+      --status-orange: #ff8c42;
+      --status-orange-ink: #ffab72;
       --shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.6);
       color-scheme: dark;
     }
@@ -86,6 +90,8 @@
     --status-green-ink: #6fe3a1;
     --status-amber: #f0b429;
     --status-amber-ink: #f5c95a;
+    --status-orange: #ff8c42;
+    --status-orange-ink: #ffab72;
     --shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.6);
     color-scheme: dark;
   }
@@ -187,6 +193,7 @@
   .alert-sub { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; }
   .alert--green { --status: var(--status-green); --status-ink: var(--status-green-ink); }
   .alert--amber { --status: var(--status-amber); --status-ink: var(--status-amber-ink); }
+  .alert--orange { --status: var(--status-orange); --status-ink: var(--status-orange-ink); }
   .alert--red   { --status: var(--cat-high);    --status-ink: var(--cat-high); }
   @media (prefers-reduced-motion: reduce) { .alert-ring { animation: none; } }
 
@@ -462,9 +469,9 @@
         <span class="today-date" id="today-date">—</span>
         <span class="today-label">Date today</span>
       </div>
-      <div class="alert alert--green" id="alert" title="Alert status: GREEN — all clear">
+      <div class="alert alert--orange" id="alert" title="Alert status: ORANGE — rain all day">
         <span class="alert-ring"><span class="alert-dot"></span></span>
-        <span class="alert-text"><span class="alert-level">GREEN</span><span class="alert-sub">Alert status</span></span>
+        <span class="alert-text"><span class="alert-level">ORANGE</span><span class="alert-sub">Rain all day</span></span>
       </div>
     </div>
   </header>
